@@ -24,6 +24,7 @@ request_payload: |
       Property3: "ES"
       Property4: "Product"
       Property5: "Client"
+expected_output_csv_file_location: "/path/to/csv/output"
 expected_output_csv: |
   EntityName,SourceSystemName,HierarchyName,LocalName,LocalDescription,Status,Property1,Property2,Property3,Property4,Property5
   CL,CSA,LCH,0030022429,AMAZON SPAIN SERVICES,S.L,A,5205,5208,5209,5211,5215,MB,MB,MB,MB,MB,ES,Client
