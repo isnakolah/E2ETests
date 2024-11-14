@@ -1,0 +1,30 @@
+endpoint: "http://localhost:4044/WebService/DRMWebService.asmx"
+soap_action: "http://ipggz.MDM.org/UploadExtendedLocalMasterData"
+request_payload: |
+  localDataList:
+    - EntityName: "CL"
+      SourceSystemName: "CSA"
+      HierarchyName: "LCH"
+      LocalName: "0030022429"
+      LocalDescription: "AMAZON SPAIN SERVICES,S.L"
+      Status: "A"
+      Property1: "5205,5208,5209,5211,5215"
+      Property2: "MB,MB,MB,MB,MB"
+      Property3: "ES"
+      Property4: "Client"
+    - EntityName: "CL"
+      SourceSystemName: "VTG"
+      HierarchyName: "LCH"
+      LocalName: "0030098420"
+      LocalDescription: "AMAZON SPAIN SERVICES - CONSUMER"
+      LocalParentName: "0030022429"
+      Status: "A"
+      Property1: "5208"
+      Property2: "MB"
+      Property3: "ES"
+      Property4: "Product"
+      Property5: "Client"
+expected_output_csv: |
+  EntityName,SourceSystemName,HierarchyName,LocalName,LocalDescription,Status,Property1,Property2,Property3,Property4,Property5
+  CL,CSA,LCH,0030022429,AMAZON SPAIN SERVICES,S.L,A,5205,5208,5209,5211,5215,MB,MB,MB,MB,MB,ES,Client
+  CL,VTG,LCH,0030098420,AMAZON SPAIN SERVICES - CONSUMER,A,5208,MB,ES,Product,Client
